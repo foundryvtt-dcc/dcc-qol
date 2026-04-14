@@ -506,6 +506,10 @@ global.foundry.utils.mergeObject = function (
             toDelete = v === null;
         }
 
+        // Prevent prototype pollution
+        if (k === "__proto__" || k === "constructor" || k === "prototype")
+            continue;
+
         // Get the existing object
         let x = original[k];
         let has = Object.prototype.hasOwnProperty.call(original, k);
