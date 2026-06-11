@@ -279,9 +279,9 @@ export async function prepareQoLAttackData(rolls, messageData) {
     const automatedDamageTotal = messageData.system.damageRoll?.total;
     const automatedCritTotal = messageData.system.critRoll?.total;
     const automatedFumbleTotal = messageData.system.fumbleRoll?.total;
-    // critText and fumbleText are already enriched HTML by the DCC system if automated
-    const automatedCritDetails = messageData.system.critText || "";
-    const automatedFumbleDetails = messageData.system.fumbleText || "";
+    // critResult and fumbleResult are already enriched HTML by the DCC system if automated
+    const automatedCritDetails = messageData.system.critResult || "";
+    const automatedFumbleDetails = messageData.system.fumbleResult || "";
     // The DCC system uses critInlineRoll and fumbleInlineRoll for the full display string when automated
     const automatedCritDisplay = messageData.system.critInlineRoll || "";
     const automatedFumbleDisplay = messageData.system.fumbleInlineRoll || "";
