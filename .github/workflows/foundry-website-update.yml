@@ -24,5 +24,7 @@ jobs:
         with:
           actionToken: ${{ secrets.GITHUB_TOKEN }}
           manifestFileName: 'module.json'
-          foundryToken: ${{ secrets.FOUNDRY_PACKAGE_RELEASE_TOKEN }}
+          # This repo's Foundry release token secret is named PACKAGE_TOKEN
+          # (other foundryvtt-dcc repos call it FOUNDRY_PACKAGE_RELEASE_TOKEN).
+          foundryToken: ${{ secrets.PACKAGE_TOKEN }}
           dryRun: false
