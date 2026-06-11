@@ -21,7 +21,7 @@
                 "id": "dcc",
                 "type": "system",
                 "compatibility": {
-                    "minimum": "0.60.0"
+                    "minimum": "0.70.0"
                 }
             }
         ],
