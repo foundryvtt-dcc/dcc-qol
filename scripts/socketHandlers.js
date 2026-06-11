@@ -149,6 +149,12 @@ export async function gmUpdateMessageFlags(payload) {
         return { success: false, reason: "not-gm" };
     }
 
+    // Only allow updates to this module's own flag scopes - player clients
+    // must not be able to write arbitrary flags on messages via the GM proxy
+    if (flagScope !== "dcc-qol" && flagScope !== "dccqol") {
+        return { success: false, reason: "invalid-flag-scope" };
+    }
+
     try {
         const message = game.messages.get(messageId);
         if (!message) {
@@ -156,8 +162,15 @@ export async function gmUpdateMessageFlags(payload) {
         }
 
         // Update all flags in a single operation
+        const forbiddenKeys = ["__proto__", "constructor", "prototype"];
         const updateData = {};
         for (const [key, value] of Object.entries(flags)) {
+            if (
+                typeof key !== "string" ||
+                key.split(".").some((part) => forbiddenKeys.includes(part))
+            ) {
+                return { success: false, reason: "invalid-flag-key" };
+            }
             updateData[`flags.${flagScope}.${key}`] = value;
         }
 
