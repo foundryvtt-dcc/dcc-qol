@@ -14,7 +14,7 @@ This repo lives in a live Foundry install at `Data/modules/dcc-qol`. The DCC sys
 npm test                                  # run all Jest tests
 npx jest scripts/__tests__/utils.test.js  # run one test file
 npx jest -t "should apply damage"         # run tests matching a name
-npm run format                            # standard --fix + stylelint --fix
+npm run format                            # prettier --write + stylelint --fix
 npm run scss                              # compile styles/dcc-qol.scss → dcc-qol.css
 npm run scss-watch                        # same, in watch mode
 ```

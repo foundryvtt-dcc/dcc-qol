@@ -3,11 +3,11 @@
     "title": "DCC Quality of Life Improvements",
     "description": "Various automation and quality of life improvements for Dungeon Crawl Classics.",
     "version": "1.2.0",
-    "library": "false",
+    "library": false,
     "compatibility": {
-        "minimum": 14,
-        "verified": 14,
-        "maximum": 14
+        "minimum": "14",
+        "verified": "14",
+        "maximum": "14"
     },
     "relationships": {
         "systems": [

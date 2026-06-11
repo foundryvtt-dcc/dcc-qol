@@ -1,6 +1,6 @@
 # DCC Quality of Life (dcc-qol)
 
-A quality of life and automation module for the Dungeon Crawl Classics RPG system in Foundry VTT. This module aims to enhance gameplay by automating common mechanics, improving combat flow, and providing additional flexibily to DCC players and GMS. This version has been re-written from the ground up to support the 0.50+ version of the DCC RPG system, and Foundry VTT v12+.
+A quality of life and automation module for the Dungeon Crawl Classics RPG system in Foundry VTT. This module aims to enhance gameplay by automating common mechanics, improving combat flow, and providing additional flexibily to DCC players and GMS. This version has been re-written from the ground up to support the 0.70+ version of the DCC RPG system, and Foundry VTT v14.
 
 ## Overview
 
@@ -137,8 +137,9 @@ scripts/
 
 ## Compatibility
 
--   **Foundry VTT**: v12 required (no v13 support yet, pending v13 support from DCC system)
--   **DCC RPG System**: Requires version 0.51.59
+-   **Foundry VTT**: v14 required
+-   **DCC RPG System**: Requires version 0.70.0 or higher
+-   **socketlib**: Required module dependency
 -   **Dice So Nice**: Full integration for 3D dice rolling
 -   **Other Modules**: Should be fully compatible with any other modules, except those that modify the attack roll card
 
