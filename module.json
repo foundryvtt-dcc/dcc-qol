@@ -50,9 +50,9 @@
             "path": "language/pt-br.json"
         }
     ],
-    "url": "#{URL}#",
-    "manifest": "#{MANIFEST}#",
-    "download": "#{DOWNLOAD}#",
+    "url": "https://github.com/foundryvtt-dcc/dcc-qol",
+    "manifest": "https://raw.githubusercontent.com/foundryvtt-dcc/dcc-qol/main/latest.json",
+    "download": "https://github.com/foundryvtt-dcc/dcc-qol/releases/download/v1.2.0/dcc-qol.zip",
     "license": "LICENSE",
     "readme": "README.md",
     "changelog": "https://github.com/foundryvtt-dcc/dcc-qol/blob/main/CHANGELOG.md",
