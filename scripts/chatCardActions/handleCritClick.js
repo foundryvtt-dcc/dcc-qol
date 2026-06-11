@@ -41,7 +41,8 @@ export async function handleCritClick(event, message, actor, weapon, qolFlags) {
             "dcc",
             "showRollModifierByDefault"
         );
-        const showModifierDialog = rollModifierDefault ^ (event.ctrlKey || event.metaKey);
+        const showModifierDialog =
+            rollModifierDefault ^ (event.ctrlKey || event.metaKey);
 
         let flavorText = `Critical Hit (Table ${
             message.system.critTableName || "Unknown"

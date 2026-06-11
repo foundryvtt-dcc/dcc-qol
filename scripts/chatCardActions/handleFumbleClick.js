@@ -47,7 +47,8 @@ export async function handleFumbleClick(
             "dcc",
             "showRollModifierByDefault"
         );
-        const showModifierDialog = rollModifierDefault ^ (event.ctrlKey || event.metaKey);
+        const showModifierDialog =
+            rollModifierDefault ^ (event.ctrlKey || event.metaKey);
 
         let flavorText = game.i18n.localize("DCC.Fumble"); // Default flavor
         if (message.system.fumbleInlineRoll) {

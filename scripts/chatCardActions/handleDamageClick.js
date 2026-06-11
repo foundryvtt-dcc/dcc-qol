@@ -49,7 +49,8 @@ export async function handleDamageClick(
             "dcc",
             "showRollModifierByDefault"
         );
-        const showModifierDialog = rollModifierDefault ^ (event.ctrlKey || event.metaKey);
+        const showModifierDialog =
+            rollModifierDefault ^ (event.ctrlKey || event.metaKey);
 
         // Use DCC's roll helper so the Modify Roll dialog is honored
         const roll = await game.dcc.DCCRoll.createRoll(
