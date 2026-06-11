@@ -1,6 +1,7 @@
 {
     "DCC-QOL.AttackRollHitsAC": "impacta CA {AC} o menor",
     "DCC-QOL.BackstabHitsAC": "apuñala CA {AC} o menor",
+    "DCC-QOL.AttackRoll": "Tirada de Ataque",
     "DCC-QOL.AttackRollHits": "impacta",
     "DCC-QOL.AttackRollHitsCrit": "impacta críticamente",
     "DCC-QOL.AttackRollMisses": "falla",
