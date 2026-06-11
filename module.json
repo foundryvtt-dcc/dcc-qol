@@ -9,12 +9,6 @@
         "verified": 14,
         "maximum": 14
     },
-    "authors": [
-        {
-            "name": "tonyrobots",
-            "url": "https://github.com/tonyrobots/"
-        }
-    ],
     "relationships": {
         "systems": [
             {
@@ -61,6 +55,6 @@
     "download": "#{DOWNLOAD}#",
     "license": "LICENSE",
     "readme": "README.md",
-    "changelog": "https://github.com/tonyrobots/dcc-qol/blob/main/CHANGELOG.md",
+    "changelog": "https://github.com/foundryvtt-dcc/dcc-qol/blob/main/CHANGELOG.md",
     "socket": true
 }

@@ -16,7 +16,7 @@
     "name": "dcc-qol",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/foundryvtt-dcc/dcc.git"
+        "url": "git+https://github.com/foundryvtt-dcc/dcc-qol.git"
     },
     "scripts": {
         "format": "standard --fix && stylelint \"**/*.scss\" --fix",
