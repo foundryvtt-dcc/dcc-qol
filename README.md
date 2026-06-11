@@ -77,7 +77,7 @@ The DCC Quality of Life module aims to improve the DCC RPG experience in Foundry
 
 2. **Manual Installation:**
 
-    - Download the latest release from [GitHub releases](https://github.com/tonyrobots/dcc-qol/releases)
+    - Download the latest release from [GitHub releases](https://github.com/foundryvtt-dcc/dcc-qol/releases)
     - Extract to your Foundry `Data/modules/` directory
     - Enable in Foundry's Module Management interface
 
@@ -146,18 +146,18 @@ scripts/
 
 This module is open source and welcomes contributions:
 
--   **Bug Reports**: Use [GitHub Issues](https://github.com/tonyrobots/dcc-qol/issues)
--   **Feature Requests**: Discussion on [GitHub](https://github.com/tonyrobots/dcc-qol/discussions)
--   **Code Contributions**: [Pull requests](https://github.com/tonyrobots/dcc-qol/pulls) welcome
+-   **Bug Reports**: Use [GitHub Issues](https://github.com/foundryvtt-dcc/dcc-qol/issues)
+-   **Feature Requests**: Discussion on [GitHub](https://github.com/foundryvtt-dcc/dcc-qol/discussions)
+-   **Code Contributions**: [Pull requests](https://github.com/foundryvtt-dcc/dcc-qol/pulls) welcome
 -   **Translations**: Help expand language support
 
 ## License
 
-This module is licensed under the [MIT License](https://github.com/tonyrobots/dcc-qol/blob/main/LICENSE).
+This module is licensed under the [MIT License](https://github.com/foundryvtt-dcc/dcc-qol/blob/main/LICENSE).
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/tonyrobots/dcc-qol/blob/main/CHANGELOG.md) for detailed version history.
+See [CHANGELOG.md](https://github.com/foundryvtt-dcc/dcc-qol/blob/main/CHANGELOG.md) for detailed version history.
 
 ---
 
