@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- Attack card enhancement no longer errors on Foundry v14. `getSpeakerActor` became a static method (`ChatMessage.getSpeakerActor(speaker)`) in v14; dcc-qol was still calling it as an instance method (`message.getSpeakerActor()`), which threw `TypeError: message.getSpeakerActor is not a function` on every attack/damage card render. The speaker actor now resolves correctly.
+
 ## v1.2.0 - 2026-04-17
 
 ### v1.2.0

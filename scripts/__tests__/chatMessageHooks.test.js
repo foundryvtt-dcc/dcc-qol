@@ -1,4 +1,4 @@
-/* globals jest, describe, it, expect, game, beforeEach */
+/* globals jest, describe, it, expect, game, beforeEach, ChatMessage */
 
 import { enhanceAttackRollCard } from "../hooks/chatMessageHooks.js";
 import { createMockPc, mockMeleeWeapon } from "../__mocks__/mock-data.js";
@@ -26,6 +26,9 @@ describe("Chat Message Hooks", () => {
             mockPC = createMockPc();
             mockWeaponProperties = ["Melee", "One-handed"];
 
+            // getSpeakerActor is a static method on ChatMessage in Foundry v14
+            ChatMessage.getSpeakerActor = jest.fn().mockReturnValue(mockPC);
+
             mockMessage = {
                 _id: "test-message-id",
                 id: "test-message-id", // Add this for messageId consistency
@@ -48,7 +51,6 @@ describe("Chat Message Hooks", () => {
                 getFlag: jest.fn((scope, flag) => {
                     return mockMessage.flags?.[scope]?.[flag];
                 }),
-                getSpeakerActor: jest.fn().mockReturnValue(mockPC),
                 rolls: [
                     {
                         render: jest

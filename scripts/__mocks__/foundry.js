@@ -228,7 +228,7 @@ class ChatMessageMock {
         }
     }
 
-    getSpeakerActor() {
+    static getSpeakerActor() {
         return new ActorMock();
     }
 
