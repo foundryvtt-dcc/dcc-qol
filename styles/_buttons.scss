@@ -290,14 +290,14 @@
 .dice-roll {
     font-family: var(--dcc-qol-text-font);
     font-size: 13px;
-    border: none;
+    border: 0;
 }
 
 .dice-formula {
     color: var(--chat-primary-color, var(--system-primary-color));
     font-weight: normal;
     background: transparent;
-    border: none;
+    border: 0;
     padding: 0;
     margin: 0 3px;
 }
@@ -306,7 +306,7 @@
     font-weight: bold;
     color: var(--chat-primary-color, var(--system-primary-color));
     background: transparent;
-    border: none;
+    border: 0;
     padding: 0;
     margin: 0 3px;
 }

@@ -3,7 +3,7 @@
  * This typically involves modifying the HTML of a chat message before it's displayed
  * or attaching event listeners to elements within a rendered chat message.
  */
-/* global game, canvas, Hooks */
+/* global game, canvas, Hooks, ChatMessage */
 
 // V13 namespace import for renderTemplate
 const { renderTemplate } = foundry.applications.handlebars;
@@ -51,7 +51,7 @@ export async function enhanceAttackRollCard(message, html, data) {
 
             // If no actor from token speaker, fallback to general speaker actor resolution
             if (!actor) {
-                actor = message.getSpeakerActor();
+                actor = ChatMessage.getSpeakerActor(speaker);
             }
 
             // Final check if an actor was determined
@@ -294,7 +294,7 @@ export async function enhanceAttackRollCard(message, html, data) {
 
             // If no actor from token speaker, fallback to general speaker actor resolution
             if (!actor) {
-                actor = message.getSpeakerActor();
+                actor = ChatMessage.getSpeakerActor(speaker);
             }
 
             // Final fallback to qolFlags.actorId
@@ -491,7 +491,7 @@ export async function enhanceAttackRollCard(message, html, data) {
             }
 
             if (!actor) {
-                actor = message.getSpeakerActor();
+                actor = ChatMessage.getSpeakerActor(speaker);
             }
 
             if (!actor && qolFlags.actorId) {

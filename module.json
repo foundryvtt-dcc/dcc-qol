@@ -2,12 +2,12 @@
     "id": "dcc-qol",
     "title": "DCC Quality of Life Improvements",
     "description": "Various automation and quality of life improvements for Dungeon Crawl Classics.",
-    "version": "1.2.0",
-    "library": "false",
+    "version": "1.2.1",
+    "library": false,
     "compatibility": {
-        "minimum": 14,
-        "verified": 14,
-        "maximum": 14
+        "minimum": "14",
+        "verified": "14",
+        "maximum": "14"
     },
     "relationships": {
         "systems": [
@@ -15,7 +15,7 @@
                 "id": "dcc",
                 "type": "system",
                 "compatibility": {
-                    "minimum": "0.60.0"
+                    "minimum": "0.70.0"
                 }
             }
         ],
@@ -50,9 +50,9 @@
             "path": "language/pt-br.json"
         }
     ],
-    "url": "#{URL}#",
-    "manifest": "#{MANIFEST}#",
-    "download": "#{DOWNLOAD}#",
+    "url": "https://github.com/foundryvtt-dcc/dcc-qol",
+    "manifest": "https://raw.githubusercontent.com/foundryvtt-dcc/dcc-qol/main/latest.json",
+    "download": "https://github.com/foundryvtt-dcc/dcc-qol/releases/download/v1.2.1/dcc-qol.zip",
     "license": "LICENSE",
     "readme": "README.md",
     "changelog": "https://github.com/foundryvtt-dcc/dcc-qol/blob/main/CHANGELOG.md",

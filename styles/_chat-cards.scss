@@ -19,7 +19,7 @@
         display: flex;
         align-items: center;
         padding: 3px 0;
-        border-bottom: none;
+        border-bottom: 0;
 
         h3 {
             flex: 1;
@@ -38,7 +38,7 @@
             height: 36px;
             margin-left: 5px;
             border-radius: 3px;
-            border: none;
+            border: 0;
         }
     }
 
@@ -157,7 +157,7 @@
 
     /* Debug information dropdown */
     .attack-debug-details {
-        margin: 5px 0 0 0;
+        margin: 5px 0 0;
         border: 1px solid var(--dcc-qol-ui-border-light);
         font-size: 11px;
 
@@ -427,6 +427,7 @@
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -444,7 +445,7 @@
 .dccqol.chat-card .backstab-icon {
     flex-shrink: 0;
     margin-top: 2px; /* Slight offset to align with text baseline */
-    border: none !important;
+    border: 0 !important;
 
     &.compact {
         margin-top: 1px;

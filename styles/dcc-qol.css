@@ -26,22 +26,22 @@
   /* Critical buttons (Orange) */
   --dcc-qol-crit-bg-start: #fff2e6;
   --dcc-qol-crit-bg-end: #ffe6cc;
-  --dcc-qol-crit-border: #cc6600;
+  --dcc-qol-crit-border: #c60;
   --dcc-qol-crit-text: #994d00;
   --dcc-qol-crit-hover-bg-start: #fff7f0;
   --dcc-qol-crit-hover-bg-end: #ffeddb;
   /* Fumble buttons (Red) */
   --dcc-qol-fumble-bg-start: #ffe6e6;
-  --dcc-qol-fumble-bg-end: #ffcccc;
-  --dcc-qol-fumble-border: #cc0000;
+  --dcc-qol-fumble-bg-end: #fcc;
+  --dcc-qol-fumble-border: #c00;
   --dcc-qol-fumble-text: #800000;
   --dcc-qol-fumble-hover-bg-start: #fff0f0;
   --dcc-qol-fumble-hover-bg-end: #ffdbdb;
   /* Friendly Fire buttons (Yellow/Amber) */
   --dcc-qol-friendly-fire-bg-start: #fff4e6;
   --dcc-qol-friendly-fire-bg-end: #ffeacc;
-  --dcc-qol-friendly-fire-border: #ff9900;
-  --dcc-qol-friendly-fire-text: #cc7700;
+  --dcc-qol-friendly-fire-border: #f90;
+  --dcc-qol-friendly-fire-text: #c70;
   --dcc-qol-friendly-fire-hover-bg-start: #fff8f0;
   --dcc-qol-friendly-fire-hover-bg-end: #fff0db;
   /* Friendly Fire Damage buttons (Brown) */
@@ -103,10 +103,10 @@ body.theme-dark {
   --dcc-qol-fumble-hover-bg-start: #330f0f;
   --dcc-qol-fumble-hover-bg-end: #220a0a;
   --dcc-qol-friendly-fire-bg-start: #4d3300;
-  --dcc-qol-friendly-fire-bg-end: #332200;
+  --dcc-qol-friendly-fire-bg-end: #320;
   --dcc-qol-friendly-fire-border: #ffa726;
   --dcc-qol-friendly-fire-text: #fff8e1;
-  --dcc-qol-friendly-fire-hover-bg-start: #332200;
+  --dcc-qol-friendly-fire-hover-bg-start: #320;
   --dcc-qol-friendly-fire-hover-bg-end: #221700;
   --dcc-qol-friendly-fire-damage-bg-start: #3d2f1f;
   --dcc-qol-friendly-fire-damage-bg-end: #2d1f0f;
@@ -195,27 +195,12 @@ body.theme-dark {
   margin: 0;
   font-size: 13px;
   /* Header */
-  /* Content */
-  /* Footer */
-  /* Status classes */
-  /* Roll results */
-  /* Attack status styling */
-  /* Deed die styling */
-  /* Weapon description */
-  /* Friendly fire warning */
-  /* Debug information dropdown */
-  /* Chat details */
-  /* Dice styling - overrides for QoL enhancement */
-  /* Damage application feedback */
-  /* Fumble and crit results */
-  /* Friendly fire specific components */
-  /* Attack/Damage roll sections */
 }
 .dccqol.chat-card .card-header {
   display: flex;
   align-items: center;
   padding: 3px 0;
-  border-bottom: none;
+  border-bottom: 0;
 }
 .dccqol.chat-card .card-header h3 {
   flex: 1;
@@ -233,10 +218,16 @@ body.theme-dark {
   height: 36px;
   margin-left: 5px;
   border-radius: 3px;
-  border: none;
+  border: 0;
+}
+.dccqol.chat-card {
+  /* Content */
 }
 .dccqol.chat-card .card-content {
   padding: 5px 0;
+}
+.dccqol.chat-card {
+  /* Footer */
 }
 .dccqol.chat-card footer {
   border-top: 1px solid var(--system-border-color);
@@ -254,6 +245,9 @@ body.theme-dark {
   font-size: 11px;
   font-weight: normal;
 }
+.dccqol.chat-card {
+  /* Status classes */
+}
 .dccqol.chat-card .status-success {
   color: var(--dcc-qol-status-success);
   font-weight: bold;
@@ -270,11 +264,17 @@ body.theme-dark {
   color: var(--dcc-qol-status-info);
   font-weight: bold;
 }
+.dccqol.chat-card {
+  /* Roll results */
+}
 .dccqol.chat-card .roll-result {
   text-align: center;
   margin: 5px 0;
   font-size: 1.1em;
   font-weight: bold;
+}
+.dccqol.chat-card {
+  /* Attack status styling */
 }
 .dccqol.chat-card .attack-status {
   text-align: center;
@@ -289,6 +289,9 @@ body.theme-dark {
   color: var(--dcc-qol-text-muted);
   font-style: italic;
 }
+.dccqol.chat-card {
+  /* Deed die styling */
+}
 .dccqol.chat-card .deed-die {
   padding: 5px;
   margin: 0;
@@ -298,6 +301,9 @@ body.theme-dark {
 }
 .dccqol.chat-card .deed-die.deed-normal {
   color: var(--chat-primary-color, var(--system-primary-color));
+}
+.dccqol.chat-card {
+  /* Weapon description */
 }
 .dccqol.chat-card .weapon-description {
   margin: 5px 0;
@@ -313,6 +319,9 @@ body.theme-dark {
   padding: 5px;
   font-size: 13px;
 }
+.dccqol.chat-card {
+  /* Friendly fire warning */
+}
 .dccqol.chat-card .friendly-fire-warning {
   margin: 5px 0;
   padding: 5px;
@@ -322,8 +331,11 @@ body.theme-dark {
   margin: 0;
   color: var(--dcc-qol-status-warning);
 }
+.dccqol.chat-card {
+  /* Debug information dropdown */
+}
 .dccqol.chat-card .attack-debug-details {
-  margin: 5px 0 0 0;
+  margin: 5px 0 0;
   border: 1px solid var(--dcc-qol-ui-border-light);
   font-size: 11px;
 }
@@ -340,8 +352,14 @@ body.theme-dark {
 .dccqol.chat-card .attack-debug p {
   margin: 0;
 }
+.dccqol.chat-card {
+  /* Chat details */
+}
 .dccqol.chat-card .chat-details {
   padding: 3px;
+}
+.dccqol.chat-card {
+  /* Dice styling - overrides for QoL enhancement */
 }
 .dccqol.chat-card .dice-total.critical {
   color: var(--dcc-qol-status-success) !important;
@@ -349,11 +367,17 @@ body.theme-dark {
 .dccqol.chat-card .dice-total.fumble {
   color: var(--dcc-qol-status-failure) !important;
 }
+.dccqol.chat-card {
+  /* Damage application feedback */
+}
 .dccqol.chat-card .dcc-qol-damage-applied {
   color: var(--dcc-qol-status-success);
   font-weight: bold;
   text-align: center;
   margin: 5px 0;
+}
+.dccqol.chat-card {
+  /* Fumble and crit results */
 }
 .dccqol.chat-card .fumble-result,
 .dccqol.chat-card .crit-result {
@@ -375,10 +399,16 @@ body.theme-dark {
   padding: 2px 5px;
   border-bottom: 1px solid var(--dcc-qol-table-border);
 }
+.dccqol.chat-card {
+  /* Friendly fire specific components */
+}
 .dccqol.chat-card .dccqol-friendlyfire-result {
   margin: 5px 0;
   padding: 5px;
   text-align: center;
+}
+.dccqol.chat-card {
+  /* Attack/Damage roll sections */
 }
 .dccqol.chat-card .dccqol-attack-roll-section,
 .dccqol.chat-card .dccqol-attack-result,
@@ -397,7 +427,6 @@ body.theme-dark {
 /* Compact variant */
 .dccqol.chat-card.compact {
   padding: 3px;
-  /* In compact layout, ensure automated results span full width and stack */
 }
 .dccqol.chat-card.compact .card-header {
   padding: 2px 0;
@@ -473,6 +502,9 @@ body.theme-dark {
   padding: 2px 5px;
   font-size: 12px;
   font-weight: bold;
+}
+.dccqol.chat-card.compact {
+  /* In compact layout, ensure automated results span full width and stack */
 }
 .dccqol.chat-card.compact .compact-damage-result,
 .dccqol.chat-card.compact .compact-auto-result {
@@ -567,7 +599,7 @@ body.theme-dark {
 .dccqol.chat-card .backstab-icon {
   flex-shrink: 0;
   margin-top: 2px; /* Slight offset to align with text baseline */
-  border: none !important;
+  border: 0 !important;
 }
 .dccqol.chat-card .backstab-icon.compact {
   margin-top: 1px;
@@ -762,14 +794,14 @@ body.theme-dark {
 .dice-roll {
   font-family: var(--dcc-qol-text-font);
   font-size: 13px;
-  border: none;
+  border: 0;
 }
 
 .dice-formula {
   color: var(--chat-primary-color, var(--system-primary-color));
   font-weight: normal;
   background: transparent;
-  border: none;
+  border: 0;
   padding: 0;
   margin: 0 3px;
 }
@@ -778,7 +810,7 @@ body.theme-dark {
   font-weight: bold;
   color: var(--chat-primary-color, var(--system-primary-color));
   background: transparent;
-  border: none;
+  border: 0;
   padding: 0;
   margin: 0 3px;
 }

@@ -1,13 +1,10 @@
 /* global foundry, jest */
 // noinspection JSUnusedLocalSymbols
 
-import $ from "jquery";
 import DCC from "../config.js";
 import DCCRoll from "./dcc-roll.js";
 import path from "path";
 import fs from "fs";
-
-global.$ = global.jQuery = $;
 
 // console.log('Loading Foundry Mocks')
 
@@ -231,7 +228,7 @@ class ChatMessageMock {
         }
     }
 
-    getSpeakerActor() {
+    static getSpeakerActor() {
         return new ActorMock();
     }
 
@@ -505,6 +502,10 @@ global.foundry.utils.mergeObject = function (
             k = k.slice(2);
             toDelete = v === null;
         }
+
+        // Prevent prototype pollution
+        if (k === "__proto__" || k === "constructor" || k === "prototype")
+            continue;
 
         // Get the existing object
         let x = original[k];
