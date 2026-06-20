@@ -97,12 +97,23 @@ export async function enhanceAttackRollCard(message, html, data) {
                 qolFlags.options || {}
             );
 
+            // --- Build the Mighty Deed table prompt (if any) ---
+            // The DCC system renders a "Roll Deed" prompt on its own attack card
+            // when a warrior's/dwarf's deed die succeeds and Mighty Deed tables
+            // are configured. Because we replace .message-content wholesale, we
+            // must render the identical prompt ourselves. game.dcc exposes the
+            // markup builder (and the listener attach below) so the lookup logic
+            // stays owned by the system. Guarded for older system versions.
+            const deedPromptHTML =
+                game.dcc?.buildMightyDeedPrompt?.(message) || "";
+
             // --- Prepare Template Data ---
             const templateData = {
                 ...qolFlags, // Includes deedDieResult and now isPC from flags
                 actor: actor,
                 weapon: weapon,
                 diceHTML: diceHTML, // Pass the extracted attack roll HTML
+                deedPromptHTML: deedPromptHTML, // Mighty Deed prompt markup (or "")
                 properties: properties,
                 messageId: message.id,
                 // Add attack card format setting for template logic
@@ -164,6 +175,11 @@ export async function enhanceAttackRollCard(message, html, data) {
             // --- Add Event Listeners for QoL Card Buttons ---
             // Determine the correct element to attach listeners to (either the specific .message-content div or the whole html if .message-content wasn't found)
             const cardElement = messageContentElement || html;
+
+            // Wire up the Mighty Deed table prompt we rendered above. The system
+            // owns the lookup handler; we just (re)attach it to our rebuilt card.
+            // Safe no-op when the prompt isn't present or on older systems.
+            game.dcc?.attachMightyDeedListeners?.(message, cardElement);
 
             const damageButton = cardElement.querySelector(
                 'button[data-action="damage"]'

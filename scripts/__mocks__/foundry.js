@@ -322,10 +322,19 @@ global.calculateCritAdjustment = jest
 global.updateFlagsMock = jest
     .fn((flags, roll) => {})
     .mockName("game.dcc.FleetingLuck.updateFlags");
+global.buildMightyDeedPromptMock = jest
+    .fn()
+    .mockReturnValue("")
+    .mockName("game.dcc.buildMightyDeedPrompt");
+global.attachMightyDeedListenersMock = jest
+    .fn()
+    .mockName("game.dcc.attachMightyDeedListeners");
 global.game.dcc = {
     DCCRoll,
     getSkillTable: global.getDCCSkillTableMock,
     processSpellCheck: global.processSpellCheckMock,
+    buildMightyDeedPrompt: global.buildMightyDeedPromptMock,
+    attachMightyDeedListeners: global.attachMightyDeedListenersMock,
     Rolls: {
         get: jest.fn(),
     },
