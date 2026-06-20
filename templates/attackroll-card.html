@@ -65,7 +65,7 @@
     <div class="roll-result">
         {{localize "DCC.DeedDie"}}: <strong>{{deedDieResult}}</strong>
     </div>
-    {{/if}} {{#if isFumble}}
+    {{/if}} {{#if deedPromptHTML}}{{{deedPromptHTML}}}{{/if}} {{#if isFumble}}
     <div class="chat-details centered">
         <div class="roll-result status-failure">{{localize "DCC.Fumble"}}!</div>
     </div>

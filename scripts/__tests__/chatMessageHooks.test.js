@@ -270,6 +270,66 @@ describe("Chat Message Hooks", () => {
             });
         });
 
+        describe("Mighty Deed prompt (DCC system #319)", () => {
+            it("passes the system-built deed prompt markup into the template", async () => {
+                // Arrange - the DCC system exposes the prompt builder; QoL must
+                // render the identical prompt inside its own card since it
+                // replaces .message-content wholesale.
+                game.dcc.buildMightyDeedPrompt.mockReturnValue(
+                    '<div class="deed-table-prompt" data-deed-roll="4"><button class="roll-deed-table">Roll Deed</button></div>'
+                );
+
+                // Act
+                await enhanceAttackRollCard(mockMessage, html, {});
+
+                // Assert - builder called with the message, result threaded to template
+                expect(game.dcc.buildMightyDeedPrompt).toHaveBeenCalledWith(
+                    mockMessage
+                );
+                expect(renderTemplate).toHaveBeenCalledWith(
+                    expect.any(String),
+                    expect.objectContaining({
+                        deedPromptHTML:
+                            expect.stringContaining("deed-table-prompt"),
+                    })
+                );
+            });
+
+            it("wires the system's deed listener onto the rebuilt card", async () => {
+                // Arrange
+                renderTemplate.mockResolvedValue(
+                    '<div class="dccqol chat-card"><div class="deed-table-prompt" data-deed-roll="4"><button class="roll-deed-table">Roll Deed</button></div></div>'
+                );
+
+                // Act
+                await enhanceAttackRollCard(mockMessage, html, {});
+
+                // Assert - QoL hands the rebuilt content to the system's attach helper
+                expect(
+                    game.dcc.attachMightyDeedListeners
+                ).toHaveBeenCalledTimes(1);
+                const [, cardElement] =
+                    game.dcc.attachMightyDeedListeners.mock.calls[0];
+                expect(
+                    cardElement.querySelector(".roll-deed-table")
+                ).not.toBeNull();
+            });
+
+            it("passes an empty deed prompt when no deed tables are offered", async () => {
+                // Arrange - builder default returns "" (no deed success / tables)
+                game.dcc.buildMightyDeedPrompt.mockReturnValue("");
+
+                // Act
+                await enhanceAttackRollCard(mockMessage, html, {});
+
+                // Assert
+                expect(renderTemplate).toHaveBeenCalledWith(
+                    expect.any(String),
+                    expect.objectContaining({ deedPromptHTML: "" })
+                );
+            });
+        });
+
         describe("Conditional Behavior", () => {
             it("should not enhance card when QoL flags are missing", async () => {
                 // Arrange
