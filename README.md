@@ -1,5 +1,17 @@
 # DCC Quality of Life (dcc-qol)
 
+> ### ⚠️ This module is being folded into the core DCC RPG system
+>
+> The combat automation features provided by DCC-QoL are being merged
+> directly into the main [DCC RPG system](https://github.com/foundryvtt-dcc/dcc)
+> (starting with v0.70.5), where they live behind opt-in settings. Once the
+> migration is complete, these features will be available natively without a
+> separate module, and **this standalone module will be deprecated**.
+>
+> If you are starting fresh, prefer enabling the equivalent settings in the
+> core DCC system. Existing DCC-QoL users can continue using the module during
+> the transition; an announcement will follow when it is fully retired.
+
 A quality of life and automation module for the Dungeon Crawl Classics RPG system in Foundry VTT. This module aims to enhance gameplay by automating common mechanics, improving combat flow, and providing additional flexibily to DCC players and GMS. This version has been re-written from the ground up to support the 0.70+ version of the DCC RPG system, and Foundry VTT v14.
 
 ## Overview
