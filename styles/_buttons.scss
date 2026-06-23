@@ -58,6 +58,20 @@
     }
 }
 
+/*
+ * The DCC system embeds its own Mighty Deed prompt (a <select> + "Roll Deed"
+ * button, markup from game.dcc.buildMightyDeedPrompt) inside our card. The
+ * blanket `width: calc(100% - 4px)` above stretches that borrowed button to
+ * full width, collapsing the paired <select> to its chevron and overflowing
+ * the card's right edge. Restore the system's intended inline layout: natural
+ * button width, no extra margin, so the select fills the rest of the row.
+ * See foundryvtt-dcc/dcc issue #768.
+ */
+.dccqol.chat-card .deed-table-prompt button {
+    width: auto;
+    margin: 0;
+}
+
 /* Action-specific button themes */
 
 /* Damage buttons (Green) */
